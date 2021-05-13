@@ -2,7 +2,7 @@ package ecommerce;
 
 public class ViewProducts {
     private String name = "omo";
-    private String price;
+    private String price = "NGN500";
 
     public void setName(String omo) {
         this.name = name;
