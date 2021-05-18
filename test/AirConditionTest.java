@@ -54,5 +54,25 @@ public class AirConditionTest {
         assertFalse(airCondition.isOn());
         airCondition.increaseTemperature();
         assertEquals(0, airCondition.getTemperature());}
+    @Test
+    void test_That_AirConditioner_Cannot_Exceed_Thirty(){
+        airCondition.setOn(true);
+        airCondition.setTemperature(29);
+        airCondition.increaseTemperature();
+        airCondition.increaseTemperature();
+        assertEquals(30,airCondition.getTemperature());
+    }
+    @Test
+    void test_That_AirCondition_Cannot_Set_Temperature_When_Off(){
+        airCondition.setOn(false);
+        airCondition.setTemperature(20);
+        airCondition.increaseTemperature();
+        assertEquals(0,airCondition.getTemperature());
+    }
+    @Test
+    void test_That_AirCondition_Come_on_At_16(){
+        airCondition.setOn(true);
+        assertEquals(16,airCondition.getTemperature());
+    }
 
 }

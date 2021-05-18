@@ -18,9 +18,10 @@ public class AirCondition {
         return isOn;
     }
 
-    public void setTemperature(int temperature) {
+    public void setTemperature(int temperature)
+    {if (isOn){
         this.temperature = temperature;
-    }
+    }}
 
     public int getTemperature() {
         return temperature;

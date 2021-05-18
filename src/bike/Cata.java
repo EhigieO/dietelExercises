@@ -1,6 +1,6 @@
 package bike;
 import java.util.Scanner;
-public class C909ata
+public class Cata
 {
     public static void main(String... args)
     {
