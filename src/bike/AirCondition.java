@@ -7,7 +7,11 @@ public class AirCondition {
 
     public void setOn(boolean isOn) {
         this.isOn = isOn;
-        if(this.isOn){ temperature = 16;}
+
+        if (this.isOn) {
+            temperature = 16;
+        }
+
         }
 
     public boolean isOn() {
