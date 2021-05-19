@@ -50,9 +50,9 @@ public class TelevisionTest {
     @Test
     void test_That_Tv_Can_Increase_Volume(){
         television.setOn(true);
-        television.setVolume(10);
+        television.setVolume(95);
         television.increaseVolume();//increase volume by 5
-        assertEquals(15,television.getVolume());
+        assertEquals(100,television.getVolume());
     }
     @Test
     void test_That_Tv_Can_Decrease_Volume(){
@@ -81,5 +81,29 @@ public class TelevisionTest {
         television.setChannel(10);
         television.nextChannel();
         assertEquals(1,television.getChannel());
+    }
+    @Test
+    void test_That_Tv_Is_Set_To_Last_Set_Conditions(){
+        television.setOn(true);
+        assertEquals(1,television.getChannel());
+        television.setChannel(10);
+        television.setVolume(20);
+        television.setOn(false);
+        assertEquals(0,television.getChannel());
+    }
+    @Test
+    void test_That_tv_volume_Cannot_Exceed_OneHundred(){
+        television.setOn(true);
+        television.setVolume(50);
+        television.setVolume(101);
+       assertEquals(50, television.getVolume());
+    }
+    @Test
+    void test_That_Tv_Channel_Cannot_Exceed_Fifty_Or_Fall_Below_One(){
+        television.setOn(true);
+        television.setChannel(40);
+        television.setChannel(51);
+        television.setChannel(0);
+        assertEquals(40, television.getChannel());
     }
 }

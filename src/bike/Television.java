@@ -15,12 +15,16 @@ public class Television {
     }
 
     public void setChannel(int channel) {
-      if (isOn){  this.channel = channel;}
+      if (isOn && channel < 51 && channel > 0) {  this.channel = channel;}
     }
 
     public int getChannel() {
-        return channel;
-    }
+        if(isOn == false){
+            return 0;
+        }
+        else return channel;
+        }
+
 
     public void nextChannel() {
         if (isOn && channel < 50) {
@@ -34,8 +38,7 @@ public class Television {
     }
 
     public void setVolume(int volume) {
-        if (isOn){
-        this.volume = volume;}
+        if (isOn && volume < 100 && volume > -1){ this.volume = volume;}
     }
 
     public int getVolume() {
@@ -43,7 +46,7 @@ public class Television {
     }
 
     public void increaseVolume() {
-        if (isOn && volume < 100){
+        if (isOn && volume < 96){
             volume = volume + 5;}
     }
 
