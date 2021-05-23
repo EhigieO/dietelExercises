@@ -1,4 +1,4 @@
-package bike;
+package chapterThreeExercises;
 
 public class Television {
     private String name = "Samsung";

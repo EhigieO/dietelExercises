@@ -1,4 +1,4 @@
-package bike;
+package chapterThreeExercises;
 
 public class Bike {
     private boolean isOn;

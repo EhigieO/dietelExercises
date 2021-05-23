@@ -1,4 +1,4 @@
-import bike.Bike;
+import chapterThreeExercises.Bike;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 /*

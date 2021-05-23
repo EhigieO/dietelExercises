@@ -1,4 +1,4 @@
-package bike;
+package chapterThreeExercises;
 
 import java.util.Scanner;
 

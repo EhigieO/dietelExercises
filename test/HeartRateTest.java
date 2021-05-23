@@ -1,6 +1,6 @@
 import org.junit.jupiter.api.Test;
 
-public class HeartRateCalculatorTest {
+public class HeartRateTest {
     @Test
     void test_That_() {
     }

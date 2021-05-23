@@ -1,4 +1,4 @@
-import bike.AirCondition;
+import chapterThreeExercises.AirCondition;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

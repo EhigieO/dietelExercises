@@ -1,4 +1,4 @@
-import bike.Television;
+import chapterThreeExercises.Television;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

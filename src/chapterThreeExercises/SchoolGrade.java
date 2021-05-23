@@ -1,4 +1,4 @@
-package bike;
+package chapterThreeExercises;
 /*collect student grades
 note the grades
 if any grade is above 90 show A

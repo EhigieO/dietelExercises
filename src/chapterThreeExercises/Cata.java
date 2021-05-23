@@ -1,4 +1,4 @@
-package bike;
+package chapterThreeExercises;
 import java.util.Scanner;
 public class Cata
 {
@@ -22,6 +22,37 @@ public class Cata
         if (reversed == pal) {
             System.out.print("Number is a Palindrome " + reversed);
         }
+    }
+    public void utmePastQuestions() {
+        Scanner scan = new Scanner(System.in);
+        int copiesToBuy;
+        int priceOfCopies;
+        System.out.print("Enter number of copies to buy: ");
+        copiesToBuy = scan.nextInt();
+        if ( copiesToBuy > 199){
+            priceOfCopies = copiesToBuy * 800;
+        }
+        if (copiesToBuy > 99 && copiesToBuy < 200){
+            priceOfCopies = copiesToBuy * 900;
+        }
+        else
+            if (copiesToBuy > 49 && copiesToBuy < 100) {
+                priceOfCopies = copiesToBuy * 1000;
+            }
+            else
+                if (copiesToBuy > 29 && copiesToBuy < 50){
+                    priceOfCopies = copiesToBuy * 1100;
+                }
+                else
+                    if (copiesToBuy > 9 && copiesToBuy < 30 ){
+                        priceOfCopies = copiesToBuy * 1200;
+                    }
+                    else
+                        if (copiesToBuy > 4 && copiesToBuy < 10){
+                            priceOfCopies = copiesToBuy * 1400;
+                        }
+                        else
+                        {priceOfCopies = copiesToBuy * 1500;}
 
     }
 }
