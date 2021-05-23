@@ -32,27 +32,28 @@ public class Cata
         if ( copiesToBuy > 199){
             priceOfCopies = copiesToBuy * 800;
         }
-        if (copiesToBuy > 99 && copiesToBuy < 200){
+        else
+            if (copiesToBuy > 99 && copiesToBuy < 200){
             priceOfCopies = copiesToBuy * 900;
         }
-        else
-            if (copiesToBuy > 49 && copiesToBuy < 100) {
+            else
+                if (copiesToBuy > 49 && copiesToBuy < 100) {
                 priceOfCopies = copiesToBuy * 1000;
             }
-            else
-                if (copiesToBuy > 29 && copiesToBuy < 50){
+                else
+                    if (copiesToBuy > 29 && copiesToBuy < 50){
                     priceOfCopies = copiesToBuy * 1100;
                 }
-                else
-                    if (copiesToBuy > 9 && copiesToBuy < 30 ){
+                    else
+                        if (copiesToBuy > 9 && copiesToBuy < 30 ){
                         priceOfCopies = copiesToBuy * 1200;
                     }
-                    else
-                        if (copiesToBuy > 4 && copiesToBuy < 10){
+                        else
+                            if (copiesToBuy > 4 && copiesToBuy < 10){
                             priceOfCopies = copiesToBuy * 1400;
                         }
-                        else
-                        {priceOfCopies = copiesToBuy * 1500;}
+                            else
+                            {priceOfCopies = copiesToBuy * 1500;}
 
     }
 }

@@ -23,20 +23,25 @@ public class DateTest {
         assertEquals(31,date.getDay());
     }
     @Test
-    void test_That_Year_Can_Set(){
+    void test_That_Year_Cannot_Set_Above_FiveThousand(){
         date.setYear(8004);
         assertEquals( 1900,date.getYear());
     }
     @Test
-    void test_That_Date_Set(){
-        date.setMonth(2);
-        date.setDay(29);
-        date.setYear(2000);
-        date.displayDate();
-       assertEquals("2/29/2000",date.displayDate());
+    void test_That_Year_Can_Set(){
+        date.setYear(2008);
+        assertEquals(2008,date.getYear());
     }
     @Test
-    void checkYear(){
+    void test_That_Date_Set(){
+        date.setMonth(2);
+        date.setDay(28);
+        date.setYear(2000);
+        date.displayDate();
+       assertEquals("2/28/2000",date.displayDate());
+    }
+    @Test
+    void test_To_Assert_Default_Values(){
         assertEquals(1,date.getDay());
         assertEquals(1,date.getMonth());
        assertEquals(1900, date.getYear());
