@@ -11,7 +11,6 @@ public class AirCondition {
         if (this.isOn) {
             temperature = 16;
         }
-
         }
 
     public boolean isOn() {
