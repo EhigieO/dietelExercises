@@ -26,21 +26,21 @@
 //    private HeartRates heartRates;
 //    @BeforeEach
 //    void start_Each_With(){
-//        heartRates = new HeartRates("Ehigie","Ikpea",07/26/2010);
+//        heartRates = new HeartRates("Ehigie","Ikpea","07/26/2010");
 //    }
 //    @Test
 //    void test_That_HeartRate_Can_Set_firstName(){
-//        HeartRates.setFirstName("Ehigie");
-//        assertEquals("Ehigie",HeartRates.getFirstName());
+//        heartRates.setFirstName("Ehigie");
+//        assertEquals("Ehigie",heartRates.getFirstName());
 //    }
 //    @Test
 //    void test_That_HeartRates_Can_Set_LastName(){
-//        HeartRates.setLastName("Ikpea");
-//        assertEquals("Ikpea",HeartRates.getLastName());
+//        heartRates.setLastName("Ikpea");
+//        assertEquals("Ikpea",heartRates.getLastName());
 //    }
 //    @Test
 //    void test_HeartRates_Can_Set_Date(){
-//        HeartRates.setDateOfBirth(07/26/2010);
-//        assertEquals("07/26/2010",HeartRates.getDateOfBirth());
+//        heartRates.setDateOfBirth(07/26/2010);
+//        assertEquals("07/26/2010",heartRates.getDateOfBirth());
 //    }
 //}
