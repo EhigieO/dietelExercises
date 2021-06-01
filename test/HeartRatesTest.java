@@ -1,7 +1,7 @@
 //import chapterThreeExercises.HeartRates;
 //import org.junit.jupiter.api.BeforeEach;
 //import org.junit.jupiter.api.Test;
-//
+//import chapterThreeExercises.Date;
 //import static org.junit.jupiter.api.Assertions.assertEquals;
 //
 ///*(Target-Heart-Rate Calculator) While exercising, you can use a heart-rate monitor to see that
@@ -26,7 +26,7 @@
 //    private HeartRates heartRates;
 //    @BeforeEach
 //    void start_Each_With(){
-//        heartRates = new HeartRates("Ehigie","Ikpea","07/26/2010");
+//        heartRates = new HeartRates("Ehigie","Ikpea",7,26,2010);
 //    }
 //    @Test
 //    void test_That_HeartRate_Can_Set_firstName(){

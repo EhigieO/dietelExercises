@@ -16,7 +16,6 @@ public class EmployeeTest {
     @BeforeEach
     void each_Should_Start_With(){
         employee = new Employee("Ikpea","Ehigie",50000);
-        Employee seniorEngineer = new Employee("Okoro", "Kelvin", 50000);
     }
     @Test
     void test_That_Employee_Can_Set_LastName() {
@@ -40,7 +39,32 @@ public class EmployeeTest {
         assertEquals(240000,employee.getAnnualSalary());
     }
     @Test
+    void test_That_Employee_Can_Set_Percentage_Increase(){
+        employee.setSalary(20000);
+        employee.salaryPercentRaise();
+        assertEquals(22000,employee.getSalaryPercentRaise());
+    }
+    @Test
+    void test_That_Employee_Can_Set_Yearly_Increase(){
+        employee.yearlyIncrease();
+
+    }
+    @Test
     void test_Set_New_salary_Of_Employee(){
-//        seniorEngineer.setsalary();
+        Employee seniorEngineer = new Employee("Okoro", "Kelvin", 500000);
+        seniorEngineer.setSalary(900000);
+        seniorEngineer.annualSalary();
+        assertEquals(900000,seniorEngineer.getSalary());
+        assertEquals(10800000,seniorEngineer.getAnnualSalary());
+    }
+    @Test
+    void test_Set_New_Salary_Of_Employee(){
+        Employee juniorEngineer = new Employee("Nomso", "Confidence", 500000);
+        juniorEngineer.setSalary(200000);
+        juniorEngineer.annualSalary();
+        juniorEngineer.salaryPercentRaise();
+        assertEquals(220000,juniorEngineer.getSalaryPercentRaise());
+        assertEquals(200000,juniorEngineer.getSalary());
+        assertEquals(2400000,juniorEngineer.getAnnualSalary());
     }
 }

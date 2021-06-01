@@ -19,7 +19,7 @@ public class Date {
                 || month == 8 || month == 10 || month == 12))
                 || ((day < 31) && (month == 9 || month == 4 || month == 6 || month == 11))
                 || ((day < 30) && (month == 2 && (isLeapYear = true)))
-                || ((day < 29) && (month == 2 && (isLeapYear = false))))) {
+                || ((day < 29 && month == 2  && (isLeapYear = false))))) {
             this.day = day;
         } else
             System.out.print("invalid day");

@@ -5,8 +5,10 @@ public class Employee {
     private String firstName;
     private double salary;
     private double annualSalary;
+    private double salaryRaise;
+    private double yearlyIncrease;
 
-    public Employee(String lastName, String firstName, int monthlySalary) {
+    public Employee(String lastName, String firstName, int salary) {
         this.lastName = lastName;
         this.firstName = firstName;
         this.salary = salary;
@@ -40,11 +42,22 @@ public class Employee {
     }
 
     public void annualSalary() {
-        annualSalary = salary * 12;
-        this.salary = salary;
+        this.annualSalary = salary * 12;
     }
 
     public double getAnnualSalary() {
         return annualSalary;
+    }
+
+    public void salaryPercentRaise() {
+        this.salaryRaise = salary + (salary * 0.1);
+    }
+
+    public double getSalaryPercentRaise() {
+        return salaryRaise;
+    }
+
+    public void yearlyIncrease() {
+        this.yearlyIncrease = (annualSalary * 0.1) + annualSalary;
     }
 }
