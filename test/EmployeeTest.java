@@ -46,8 +46,10 @@ public class EmployeeTest {
     }
     @Test
     void test_That_Employee_Can_Set_Yearly_Increase(){
+        employee.setSalary(20000);
+        employee.annualSalary();
         employee.yearlyIncrease();
-
+        assertEquals(264000,employee.getYearlyIncrease());
     }
     @Test
     void test_Set_New_salary_Of_Employee(){
@@ -56,6 +58,7 @@ public class EmployeeTest {
         seniorEngineer.annualSalary();
         assertEquals(900000,seniorEngineer.getSalary());
         assertEquals(10800000,seniorEngineer.getAnnualSalary());
+
     }
     @Test
     void test_Set_New_Salary_Of_Employee(){
@@ -63,8 +66,10 @@ public class EmployeeTest {
         juniorEngineer.setSalary(200000);
         juniorEngineer.annualSalary();
         juniorEngineer.salaryPercentRaise();
+        juniorEngineer.yearlyIncrease();
         assertEquals(220000,juniorEngineer.getSalaryPercentRaise());
         assertEquals(200000,juniorEngineer.getSalary());
         assertEquals(2400000,juniorEngineer.getAnnualSalary());
+        assertEquals(2640000,juniorEngineer.getYearlyIncrease());
     }
 }

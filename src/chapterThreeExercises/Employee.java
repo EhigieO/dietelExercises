@@ -60,4 +60,8 @@ public class Employee {
     public void yearlyIncrease() {
         this.yearlyIncrease = (annualSalary * 0.1) + annualSalary;
     }
+
+    public double getYearlyIncrease() {
+        return yearlyIncrease;
+    }
 }

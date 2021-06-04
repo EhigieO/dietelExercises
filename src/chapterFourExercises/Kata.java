@@ -17,7 +17,7 @@ public class Kata {
         int reversed = 0;
         System.out.println("Enter number: ");
         number = input.nextInt();
-        int pal = number + 0;
+        int pal = number;
 
         while (number != 0) {
             int digit = number % 10;

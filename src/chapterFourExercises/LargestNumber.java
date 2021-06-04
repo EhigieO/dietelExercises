@@ -13,23 +13,19 @@ import java.util.Scanner;
 
 public class LargestNumber {
     public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
         int count = 0;
-        int number = 0;
+        int number;
         int largestNumber = 0;
-        int largerNumber = 0;
+        int secondLargestNumber = 0;
+        System.out.print("Enter a set of ten numbers:");
         while (count < 10) {
-            Scanner input = new Scanner(System.in);
-            System.out.print("Enter a set of ten numbers:");
             number = input.nextInt();
-            if (number > largestNumber) {
-                largestNumber = number;
-            }
-            if (largestNumber > number && number > largerNumber){
-                largerNumber = number;
-            }
+            if (number > largestNumber) largestNumber = number;
+            if (number < largestNumber && number > secondLargestNumber) secondLargestNumber = number;
             count++;
         }
         System.out.println(largestNumber);
-        System.out.println(largestNumber);
+        System.out.println(secondLargestNumber);
     }
 }
