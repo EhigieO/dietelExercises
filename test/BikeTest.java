@@ -21,7 +21,7 @@ Requirements:
 import static org.junit.jupiter.api.Assertions.*;
 
 public class BikeTest {
-    private Bike okada;
+     Bike okada = new Bike();
 
     @BeforeEach
     void startEachTestWithThis() {

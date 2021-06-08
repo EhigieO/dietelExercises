@@ -3,7 +3,8 @@ package chapterFourExercises;
 import java.util.Scanner;
 
 public class Kata {
-    public static void main(String... args) {   //palindrome();
+    public static void main(String... args) {
+        //palindrome();
         // testDrillerSoftware()
         //ellersProfit();
         Kata kata = new Kata();
