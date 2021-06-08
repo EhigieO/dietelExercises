@@ -22,16 +22,6 @@ public class IncreasingOrderFactors {
         System.out.println(number + " .");
     }
     public static void pyramid(){
-        int num = 0;
-        for (int i = 1;i <= 10;i++) {
-            for (int k = 1; k <= 10 - i; k++) {
-                System.out.print("  ");
-            }
-            for (int j = 1; j <= i; j++) {
-                System.out.print(num+= 1);
-            }
-            System.out.println();
-        }
 
-    }
+          }
 }
