@@ -3,8 +3,7 @@ import java.util.Scanner;
 
 public class IncreasingOrderFactors {
     public static void main(String[] args) {
-        //factor();
-        pyramid();
+        factor();
     }
     public static void factor() {
         Scanner input = new Scanner(System.in);
@@ -21,7 +20,4 @@ public class IncreasingOrderFactors {
         }
         System.out.println(number + " .");
     }
-    public static void pyramid(){
-
-          }
 }

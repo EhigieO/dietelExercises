@@ -32,7 +32,7 @@ public class SalaryCalculator {
                 overTime = (newHour + (newHour *0.5)) * hourlyRate;
                 grossPay = overTime + (hourlyRate * 40);
             }
-            System.out.println("Grosspay = "+grossPay);
+            System.out.println(name+"'s Grosspay is $"+grossPay);
         }
     }
 }
