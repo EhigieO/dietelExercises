@@ -2,6 +2,7 @@ import chapterFourExercises.Kata;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class KataTest {
     private Kata kata;
@@ -14,5 +15,11 @@ public class KataTest {
     void test_That_Kata_Can_Find_Factorial(){
         Kata kata = new Kata();
         assertEquals(6,kata.findFactorial(3));
+    }
+    @Test
+    void testThatKataCanConvertToBinary(){
+        Kata kata = new Kata();
+       // kata.findBinaryNumber(8);
+        assertEquals("1000", kata.decimalToBinary(8));
     }
 }

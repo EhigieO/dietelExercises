@@ -1,5 +1,4 @@
 import chapterThreeExercises.Account;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -44,5 +43,12 @@ public class AccountTest {
         ehigieAccount.withdraw(-8000);
         assertEquals(100000,ehigieAccount.getBalance());
     }
+    @Test
+    void testThatAccountHasDefaultPin() {
+    }
+    @Test
+    void testThatAccountCanChangePin(){
 
+
+    }
 }

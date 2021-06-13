@@ -4,10 +4,10 @@ import java.util.Scanner;
 
 public class Cata {
     public static void main(String[] args) {
-        Number();
-        evenNumber();
-        factor();
-       whileLoop();
+//        Number();
+//        evenNumber();
+//        factor();
+//        whileLoop();
     }
     public static void Number(String... args) {
         int number = 0;

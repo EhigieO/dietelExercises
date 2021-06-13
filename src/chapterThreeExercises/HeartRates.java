@@ -1,5 +1,7 @@
 package chapterThreeExercises;
 
+import java.time.LocalDate;
+
 public class HeartRates {
     private String firstName;
     private String lastName;
@@ -27,11 +29,21 @@ public class HeartRates {
         this.lastName = lastName;
     }
 
-    public void setDateOfBirth(Date dateOfBirth) {
-        this.dateOfBirth = dateOfBirth;
-    }
-
     public String getDateOfBirth() {
         return dateOfBirth.getMonth()+"/"+dateOfBirth.getDay()+"/"+dateOfBirth.getYear();
+    }
+
+    public int getAge() {
+        return LocalDate.now().getYear() - dateOfBirth.getYear();
+    }
+
+    public int maximumRate() {
+        return 220 - getAge();
+    }
+
+    public void targetHeartRange() {
+       int minTargetHeartRange = (maximumRate() * 50) / 100;
+       int maxTargetHeartRange = (maximumRate() * 85) / 100;
+        System.out.printf("Target heart rate is between %d and %d", minTargetHeartRange, maxTargetHeartRange);
     }
 }

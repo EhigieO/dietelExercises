@@ -7,7 +7,7 @@ public class SalaryCalculator {
         double grossPay;
         int newHour;
         double overTime;
-        int hours = 0;
+        int hours;
         int hourlyRate;
         int numberOfEmployees;
         String name;
@@ -25,9 +25,8 @@ public class SalaryCalculator {
             System.out.println("Enter number of number of hours worked:");
             hours = input.nextInt();
 
-            if (hours <= 40){
-                grossPay = hours * hourlyRate;
-            }else {
+            if (hours <= 40) grossPay = hours * hourlyRate;
+            else {
                 newHour = hours - 40;
                 overTime = (newHour + (newHour *0.5)) * hourlyRate;
                 grossPay = overTime + (hourlyRate * 40);

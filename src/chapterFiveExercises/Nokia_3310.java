@@ -49,7 +49,6 @@ public class Nokia_3310 {
                         case 5:
                         case 6:
                         case 7:
-                            break;
                         case 8:
                             String prompt3 = """
                                     Option

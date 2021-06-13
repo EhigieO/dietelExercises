@@ -2,12 +2,13 @@ package chapterThreeExercises;
 
 public class Account {
     private double accountBalance;
+    private int pin;
     private String accountName;
     double depositAmount;
 
     public Account(String accountName, double accountBalance) {
-    this.accountName = accountName;
-    this.accountBalance = accountBalance;
+        this.accountName = accountName;
+        this.accountBalance = accountBalance;
     }
 
     public String getName() {

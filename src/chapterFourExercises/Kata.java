@@ -101,4 +101,22 @@ public class Kata {
         }
         return factorial;
     }
+
+    public String decimalToBinary(int decimal) {
+        StringBuilder binaryNumber = new StringBuilder();
+        int remainder;
+        while (decimal >= 1)
+        {
+        remainder = decimal % 2;
+        if (remainder == 0){
+            binaryNumber.insert(0, 0);
+        }
+        if (remainder > 0){
+            binaryNumber.insert(0, 1);
+        }
+        decimal /= 2;
+        }
+        return binaryNumber.toString();
+    }
+
 }
