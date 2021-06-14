@@ -7,7 +7,5 @@ public class CheckerBoardAsteriksTest {
     void testToPrintPattern() {
         CheckerBoardAsteriks pattern = new CheckerBoardAsteriks();
         pattern.printAsteriks();
-
-
     }
 }

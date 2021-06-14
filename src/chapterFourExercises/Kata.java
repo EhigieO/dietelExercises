@@ -7,8 +7,9 @@ public class Kata {
         //palindrome();
         // testDrillerSoftware()
         //ellersProfit();
-        Kata kata = new Kata();
-        kata.reversedNumber(54321);
+//        Kata kata = new Kata();
+//        kata.reversedNumber(54231);
+        test();
     }
 
     public static void palindrome() {
@@ -119,4 +120,28 @@ public class Kata {
         return binaryNumber.toString();
     }
 
+    public String convertAnyBaseToBinary(int number, int base) {
+        String binaryNumber = "";
+            while (number!=0){
+                binaryNumber =number % base + binaryNumber;
+                number = number / base;
+        }
+        return binaryNumber;
+    }
+    public static void test()
+    {
+        int row = 10;
+        int column;
+        while ( row >= 1 )
+        {
+            column = 1;
+            while ( column <= 10 )
+            {
+                System.out.print( row % 2 == 1 ? "<" : ">" );
+                ++column;
+            }
+            --row;
+            System.out.println();
+        }
+    }
 }

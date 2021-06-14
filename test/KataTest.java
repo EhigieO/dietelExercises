@@ -22,4 +22,9 @@ public class KataTest {
        // kata.findBinaryNumber(8);
         assertEquals("1000", kata.decimalToBinary(8));
     }
+    @Test
+    void testThatKataCanConvertToBinaryFromAnyBaseBetweenOneAndNine(){
+        Kata kata = new Kata();
+        assertEquals(10011,kata.convertAnyBaseToBinary(164,9));
+    }
 }
