@@ -120,28 +120,30 @@ public class Kata {
         return binaryNumber.toString();
     }
 
-    public String convertAnyBaseToBinary(int number, int base) {
-        String binaryNumber = "";
-            while (number!=0){
-                binaryNumber =number % base + binaryNumber;
-                number = number / base;
+    public String convertAnyBaseToBinary(int decimalNumber, int base) {
+        int digit;
+        String octalNumber = "";
+        if (base < 10) {
+            for (int i = 0; i < decimalNumber; i++) {
+                digit = decimalNumber % base;
+                decimalNumber /= base;
+                octalNumber = digit + octalNumber;
+            }
         }
-        return binaryNumber;
+
+        System.out.println(decimalNumber + octalNumber);
+        return decimalNumber + octalNumber;
+
+
     }
     public static void test()
     {
-        int row = 10;
-        int column;
-        while ( row >= 1 )
-        {
-            column = 1;
-            while ( column <= 10 )
-            {
-                System.out.print( row % 2 == 1 ? "<" : ">" );
-                ++column;
-            }
-            --row;
-            System.out.println();
-        }
+        for (int i = 1; i <= 10; i++)
+                {
+                for (int j = 1; j <= 5; j++)
+                    System.out.print('@');
+                System.out.println();
+                }
     }
 }
+
