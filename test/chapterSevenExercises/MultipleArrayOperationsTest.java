@@ -11,7 +11,7 @@ class MultipleArrayOperationsTest {
     void operationsCanAddArrays(){
         arrayOperations = new MultipleArrayOperations();
        // int[] values = new int[]{25,32,84,20,35,24,99,10,74,45};
-        assertEquals(423, arrayOperations.sumUpArrays(new int[]{25, 32, 84, 20, 35, 24, 99, 10, 74, 45}));
+        assertEquals(448, arrayOperations.sumUpArrays(new int[]{25, 32, 84, 20, 35, 24, 99, 10, 74, 45}));
     }
     @Test
     void operationsCanFindMaxArrays(){
@@ -27,6 +27,6 @@ class MultipleArrayOperationsTest {
     @Test
     void OperationsCanFindAverageOfArrays(){
         arrayOperations = new MultipleArrayOperations();
-        assertEquals(42,arrayOperations.findAverageArray(new int [] {25, 32, 84, 20, 35, 24, 99, 10, 74, 45}));
+        assertEquals(44,arrayOperations.findAverageArray(new int [] {25, 32, 84, 20, 35, 24, 99, 10, 74, 45}));
     }
 }
