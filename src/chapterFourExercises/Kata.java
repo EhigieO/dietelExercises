@@ -1,5 +1,6 @@
 package chapterFourExercises;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Kata {
@@ -9,7 +10,7 @@ public class Kata {
         //ellersProfit();
 //        Kata kata = new Kata();
 //        kata.reversedNumber(54231);
-        test();
+     //   checkClass();
     }
 
     public static void palindrome() {
@@ -136,14 +137,41 @@ public class Kata {
 
 
     }
-    public static void test()
+    public static void findMaxFrom()
     {
-        for (int i = 1; i <= 10; i++)
-                {
-                for (int j = 1; j <= 5; j++)
-                    System.out.print('@');
-                System.out.println();
-                }
+
+    }
+
+int smallestNum;
+    public void findMaxNumber(int numOne, int numTwo) {
+        if ( numOne > numTwo)
+            smallestNum = numTwo;
+        else
+            smallestNum = numOne;
+    }
+
+    public int getMinNumber() {
+        return smallestNum;
+    }
+
+    public int findMaxNumberFrom() {
+        return 0;
+    }
+    static void checkClass() {
+        Scanner input = new Scanner(System.in);
+        int age = 0;
+        while (age != 15) {
+            System.out.print("How old are you:");
+
+            age = input.nextInt();
+            if (age >= 10 && age <= 30) {
+                System.out.print("          ");
+                System.out.println("Enter this Class");
+            } else
+            { System.out.print("          ");
+            System.out.println("Go to the next class you bloody wimp");}
+            System.out.println();
+        }
     }
 }
 
