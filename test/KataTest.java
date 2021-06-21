@@ -17,6 +17,12 @@ public class KataTest {
         assertEquals(6,kata.findFactorial(3));
     }
     @Test
+    void testThatStoreDaysCanBeCalculated(){
+        Kata kata = new Kata();
+        assertTrue(true,kata.checkStoreDay());
+    }
+
+    @Test
     void testThatKataCanConvertToBinary(){
         Kata kata = new Kata();
        // kata.findBinaryNumber(8);

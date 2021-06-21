@@ -29,9 +29,17 @@ public class MultipleArrayOperations {
 
     public double findAverageArray(int[] values) {
         double averageArray;
-        averageArray = (sumUpArrays(values))/ values.length;
+        averageArray = (sumUpArrays(values)) / values.length;
         System.out.println(averageArray);
         return averageArray;
+    }
+
+    public int sumUpInfiniteNumbers(String name,int... numbers) {
+        int sum = 0;
+        for (int number : numbers) {
+            sum = sum + number;
+        }
+        return sum;
     }
 }
 

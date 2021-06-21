@@ -173,5 +173,10 @@ int smallestNum;
             System.out.println();
         }
     }
+
+    public String checkStoreDay() {
+
+        return null;
+    }
 }
 
