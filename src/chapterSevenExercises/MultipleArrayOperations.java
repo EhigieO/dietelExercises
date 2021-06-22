@@ -2,7 +2,7 @@ package chapterSevenExercises;
 
 public class MultipleArrayOperations {
 
-    public double sumUpArrays(int[] values) {
+    public static double sumUpArrays(int[] values) {
         double sum = 0.0;
         for (int value : values) {
             sum = sum + value;

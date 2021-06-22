@@ -17,7 +17,7 @@ class MultipleArrayOperationsTest {
     @Test
     void operationsCanFindMaxArrays(){
         arrayOperations = new MultipleArrayOperations();
-        assertEquals(99,arrayOperations.findMaxArray(new int [] {25, 32, 84, 20, 35, 24, 99, 10, 74, 45}));
+        assertEquals(99,arrayOperations.findMaxArray(new int[]{25, 32, 84, 20, 35, 24, 99, 10, 74, 45}));
 
     }
     @Test

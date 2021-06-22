@@ -3,6 +3,8 @@ package chapterFourExercises;
 import java.util.Arrays;
 import java.util.Scanner;
 
+import static chapterSevenExercises.MultipleArrayOperations.sumUpArrays;
+
 public class Kata {
     public static void main(String... args) {
         //palindrome();
@@ -178,5 +180,29 @@ int smallestNum;
 
         return null;
     }
+
+    public static int maxSumArray(int[] numArray) {
+        int sumArray;
+        int maxArray;
+        int maxSumArray = 0;
+        sumArray = (int) sumUpArrays(numArray);
+
+        for (int i = 0;i < numArray.length;i++){
+            maxArray = sumArray - numArray[i];
+           maxSumArray = Math.max(maxArray ,maxSumArray);
+            }
+         return maxSumArray;
+        }
+
+    public static int minSumArray(int[] numArray) {
+        int minArray;
+        int sumMinArray = Integer.MAX_VALUE;
+        for (int i = 0;i < numArray.length;i++){
+            minArray = ((int) sumUpArrays(numArray)) - numArray[i];
+            sumMinArray = Math.min(sumMinArray,minArray);
+        }
+        return sumMinArray;
+    }
 }
+
 

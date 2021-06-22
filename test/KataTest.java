@@ -32,6 +32,17 @@ public class KataTest {
 //    void testThatKataCanConvertToBinaryFromAnyBaseBetweenOneAndNine(){
 //        Kata kata = new Kata();
 //        assertEquals(10011,kata.convertAnyBaseToBinary(164,9));
-//    }
-
+//   }
+    @Test
+    void testThatKataCanPrintMaxSumArray(){
+        Kata kata = new Kata();
+        int [] numArray = {2,4,6,8};
+        assertEquals(18, kata.maxSumArray(numArray));
+    }
+    @Test
+    void testThatKataCanPrintMinSumArray() {
+        Kata kata = new Kata();
+        int[] numArray = {2, 4, 6, 8};
+        assertEquals(12, kata.minSumArray(numArray));
+    }
 }
