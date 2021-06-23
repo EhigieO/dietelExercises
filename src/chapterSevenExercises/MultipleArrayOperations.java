@@ -30,7 +30,8 @@ public class MultipleArrayOperations {
     public double findAverageArray(int[] values) {
         double averageArray;
         averageArray = (sumUpArrays(values)) / values.length;
-        System.out.println(averageArray);
+
+
         return averageArray;
     }
 

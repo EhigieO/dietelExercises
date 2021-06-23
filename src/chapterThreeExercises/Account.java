@@ -2,13 +2,15 @@ package chapterThreeExercises;
 
 public class Account {
     private double accountBalance;
-    private int pin;
     private String accountName;
     double depositAmount;
 
     public Account(String accountName, double accountBalance) {
         this.accountName = accountName;
         this.accountBalance = accountBalance;
+    }
+
+    public Account() {
     }
 
     public String getName() {
@@ -33,4 +35,11 @@ public class Account {
         else
             System.out.println("Check withdraw amount and try again");
     }
-}
+
+    public void transfer(int transferAmount,Account otherAccount) {
+            Account receivingAccount = otherAccount;
+            withdraw(transferAmount);
+            receivingAccount.deposit(transferAmount);
+        }
+    }
+

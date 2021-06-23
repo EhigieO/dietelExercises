@@ -4,13 +4,10 @@ import java.util.Arrays;
 
     public class ArrayAssignment {
         public static void main(String[] args) {
-            int[][][] multiArray = {{{23, 12, 57,}, {51, 10, 92}, {10, 12, 22}}};
-            for (int a = 0;a < 1;a++ ){
+            int[][] multiArray = {{23, 12, 57,}, {51, 10, 92}, {10, 12, 22}};
+            for (int a = 0;a < 3;a++ ){
                 for (int b = 0; b < 3; b++){
-                    for (int c = 0; c < 3;c++){
-                        System.out.print(multiArray[a][b][c] + " ");
-                    }
-                    System.out.println();
+                        System.out.print(multiArray[a][b] + " ");
                 }
                 System.out.println();
             }
