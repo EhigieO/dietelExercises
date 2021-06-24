@@ -31,4 +31,5 @@ class BankStaffTest {
         bankStaff.setUserName("Manager");
         assertEquals("Manager", bankStaff.getUserName());
     }
+
 }

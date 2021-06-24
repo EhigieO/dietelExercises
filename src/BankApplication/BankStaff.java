@@ -1,11 +1,13 @@
 package BankApplication;
 
+import java.util.ArrayList;
+
 public class BankStaff {
 
     private String firstName;
     private String lastName;
-    private String pin;
-    private String userName;
+    private static String pin;
+    private static String userName;
 
     public void setFirstName(String firstName) {
         this.firstName = firstName;
@@ -27,7 +29,7 @@ public class BankStaff {
         this.pin = pin;
     }
 
-    public String getPin() {
+    public static String getPin() {
         return pin;
     }
 
@@ -35,7 +37,8 @@ public class BankStaff {
         this.userName = userName;
     }
 
-    public String getUserName() {
+    public static String getUserName() {
         return userName;
     }
+
 }
