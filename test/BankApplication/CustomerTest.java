@@ -1,5 +1,6 @@
 package BankApplication;
 
+import chapterThreeExercises.Account;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -30,5 +31,26 @@ class CustomerTest {
     @Test
     void testThatCustomerCanSetPin(){
         customer.setPin(7039);
+        assertEquals(7039,customer.getPin());
+    }
+    @Test
+    void testThatCustomerCanDeposit(){
+        assertEquals(1000,customer.getBalance());
+        System.out.println(customer.getBalance());
+
+    }
+    @Test
+    void testThatCustomerCanWithdraw(){
+        customer.deposit(1000);
+        customer.withdraw(500);
+        assertEquals(500,customer.getBalance());
+    }
+    @Test
+    void testThatCustomerCanTransfer(){
+        Account latestAccount = new Account();
+        customer.deposit(1000);
+        customer.transfer(500,latestAccount);
+        assertEquals(500.0,customer.getBalance());
+        System.out.println(latestAccount.getBalance());
     }
 }

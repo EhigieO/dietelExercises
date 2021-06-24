@@ -3,7 +3,6 @@ package chapterThreeExercises;
 public class Account {
     private double accountBalance;
     private String accountName;
-    double depositAmount;
 
     public Account(String accountName, double accountBalance) {
         this.accountName = accountName;
