@@ -8,6 +8,7 @@ public class Customer {
     private String phoneNumber;
     private static String pin;
     private static Account account = new Account();
+    private int accountNumber;
 
     public void setFirstName(String firstName) {
         this.firstName = firstName;
@@ -53,11 +54,15 @@ public class Customer {
         account.withdraw(withdrawAmount);
     }
 
-    public static void transfer(int transferAmount, int receivingAccount) {
+    public static void transfer(int transferAmount, Account receivingAccount) {
         account.transfer(transferAmount,receivingAccount);
     }
 
     public String toString(){
-        return firstName + " " + lastName + " " + phoneNumber;
+        return firstName + " " + lastName + " " + phoneNumber + " " + accountNumber;
+    }
+
+    public int getAccountNumber() {
+        return accountNumber = account.getAccountNumber();
     }
 }

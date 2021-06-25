@@ -21,10 +21,7 @@ public class Bank {
 
     public void deleteCustomer( int accountNumber) {
         allCustomers.remove(accountNumber - 1);
-    }
 
-    public void issueAccountNumber() {
-        accountNumber = allCustomers.size()  + 1;
     }
 
     public ArrayList<Customer> getAllCustomers() {

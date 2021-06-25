@@ -56,8 +56,9 @@ public class AccountTest {
         assertEquals(1000,account.getBalance());
         assertEquals(1000,dummyAccount.getBalance());
     }
-//    @Test
-//    void testThatAccountCanHasAccountNumber(){
-//        account.setAccountNumber();
-//    }
+    @Test
+    void testThatAccountCanHasAccountNumber(){
+
+        assertEquals(1,account.getAccountNumber());
+    }
 }

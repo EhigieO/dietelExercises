@@ -5,15 +5,20 @@ import BankApplication.Bank;
 public class Account {
     private double accountBalance;
     private String accountName;
-    private int accountNumber;
+    private final int accountNumber;
     Bank bank = new Bank();
+    int counter = 0;
 
     public Account(String accountName, double accountBalance) {
+        counter ++;
+        accountNumber = counter;
         this.accountName = accountName;
         this.accountBalance = accountBalance;
     }
 
     public Account() {
+        counter++;
+        accountNumber = counter;
     }
 
     public String getName() {
@@ -39,9 +44,13 @@ public class Account {
             System.out.println("Check withdraw amount and try again");
     }
 
-    public void transfer(int transferAmount, int otherAccount) {
+    public void transfer(int transferAmount, Account otherAccount) {
             Account receivingAccount = otherAccount;
             withdraw(transferAmount);
             receivingAccount.deposit(transferAmount);
         }
+
+    public int getAccountNumber() {
+        return accountNumber;
+    }
 }

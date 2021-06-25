@@ -52,7 +52,7 @@ public class BankInnovate {
                         userName = input.next();
                         System.out.print("Password: ");
                         password = input.next();
-                        if (userName == Customer.getFirstName() && password == Customer.getPin()){
+                        if (userName.equals(Customer.getFirstName()) && password.equals(Customer.getPin())){
                             String prompt4 = """
                                     1) Deposit
                                     2) Withdraw
@@ -75,7 +75,7 @@ public class BankInnovate {
                                     amount = input.nextInt();
                                     System.out.print("Enter account number:");
                                     int accountNumber = input.nextInt();
-                                    Customer.transfer(amount,accountNumber);
+                                   // Customer.transfer(amount,accountNumber);
                                 case 4:
                                     System.out.print("Enter amount to recharge: ");
                                     amount = input.nextInt();
@@ -83,7 +83,7 @@ public class BankInnovate {
                                     phoneNumber = input.next();
                                     Customer.withdraw(amount);
                                 case 5:
-                                                                        
+
                             }
                         }
                 }

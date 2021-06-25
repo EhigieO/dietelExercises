@@ -17,12 +17,6 @@ class BankTest {
         assertEquals(1,bank.getCustomerSize());
     }
     @Test
-    void testThatBankCanIssueAccountNumber(){
-        bank.createCustomer("Sonny","Duke","07039410420",2000);
-        bank.issueAccountNumber();
-        assertEquals(2,bank.getAccountNumber());
-    }
-    @Test
     void testThatBankCanDeleteCustomer(){
         bank.createCustomer("Sonny","Duke","07039410420",2000);
         bank.deleteCustomer(1);

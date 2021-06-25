@@ -53,4 +53,8 @@ class CustomerTest {
         assertEquals(500.0,customer.getBalance());
         System.out.println(latestAccount.getBalance());
     }
+    @Test
+    void testThatCustomerCanGetAccountNumber(){
+        customer.getAccountNumber();
+    }
 }
