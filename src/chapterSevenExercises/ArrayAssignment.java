@@ -9,7 +9,7 @@ import java.util.Arrays;
                 for (int b = 0; b < 3; b++){
                         System.out.print(multiArray[a][b] + " ");
                 }
-                System.out.println();
+                System.out.println(multiArray);
             }
 
 

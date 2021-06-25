@@ -1,8 +1,12 @@
 package chapterThreeExercises;
 
+import BankApplication.Bank;
+
 public class Account {
     private double accountBalance;
     private String accountName;
+    private int accountNumber;
+    Bank bank = new Bank();
 
     public Account(String accountName, double accountBalance) {
         this.accountName = accountName;
@@ -35,10 +39,9 @@ public class Account {
             System.out.println("Check withdraw amount and try again");
     }
 
-    public void transfer(int transferAmount,Account otherAccount) {
+    public void transfer(int transferAmount, int otherAccount) {
             Account receivingAccount = otherAccount;
             withdraw(transferAmount);
             receivingAccount.deposit(transferAmount);
         }
-    }
-
+}

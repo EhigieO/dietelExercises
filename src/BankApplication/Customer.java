@@ -3,17 +3,17 @@ package BankApplication;
 import chapterThreeExercises.Account;
 
 public class Customer {
-    private String firstName;
+    private static String firstName;
     private String lastName;
     private String phoneNumber;
-    private int pin;
-    private Account account = new Account();
+    private static String pin;
+    private static Account account = new Account();
 
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
 
-    public String getFirstName() {
+    public static String getFirstName() {
         return firstName;
     }
 
@@ -33,15 +33,15 @@ public class Customer {
         return phoneNumber;
     }
 
-    public void setPin(int pin) {
+    public void setPin(String pin) {
         this.pin = pin;
     }
 
-    public int getPin() {
+    public static String getPin() {
         return pin;
     }
 
-    public void deposit(int depositAmount) {
+    public static void deposit(int depositAmount) {
         account.deposit(depositAmount);
     }
 
@@ -49,11 +49,15 @@ public class Customer {
         return account.getBalance();
     }
 
-    public void withdraw(int withdrawAmount) {
+    public static void withdraw(int withdrawAmount) {
         account.withdraw(withdrawAmount);
     }
 
-    public void transfer(int transferAmount,Account receivingAccount) {
+    public static void transfer(int transferAmount, int receivingAccount) {
         account.transfer(transferAmount,receivingAccount);
+    }
+
+    public String toString(){
+        return firstName + " " + lastName + " " + phoneNumber;
     }
 }

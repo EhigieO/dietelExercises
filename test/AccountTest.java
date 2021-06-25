@@ -52,13 +52,12 @@ public class AccountTest {
     void testThatAccountCanTransfer() {
         Account dummyAccount = new Account();
         account.deposit(2000);
-        account.transfer(1000, dummyAccount);
+      //  account.transfer(1000, dummyAccount);
         assertEquals(1000,account.getBalance());
         assertEquals(1000,dummyAccount.getBalance());
     }
-    @Test
-    void testThatAccountCanChangePin(){
-
-
-    }
+//    @Test
+//    void testThatAccountCanHasAccountNumber(){
+//        account.setAccountNumber();
+//    }
 }
