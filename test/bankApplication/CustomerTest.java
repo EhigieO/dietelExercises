@@ -1,4 +1,4 @@
-package BankApplication;
+package bankApplication;
 
 import chapterThreeExercises.Account;
 import org.junit.jupiter.api.BeforeEach;

@@ -1,10 +1,9 @@
-package BankApplication;
+package bankApplication;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class Bank {
-    int accountNumber;
+//    int accountNumber;
     private static ArrayList<Customer> allCustomers = new ArrayList<Customer>();
     public static void createCustomer(String firstName, String lastName, String phoneNumber, int initialDeposit) {
         Customer newCustomer = new Customer();
@@ -25,11 +24,11 @@ public class Bank {
     }
 
     public ArrayList<Customer> getAllCustomers() {
-        System.out.println(allCustomers);
+        //System.out.println(allCustomers);
         return allCustomers;
     }
 
-    public int getAccountNumber() {
-        return accountNumber;
-    }
+//    public int getAccountNumber() {
+//        return accountNumber;
+//    }
 }

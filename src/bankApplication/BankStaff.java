@@ -1,6 +1,4 @@
-package BankApplication;
-
-import java.util.ArrayList;
+package bankApplication;
 
 public class BankStaff {
 

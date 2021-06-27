@@ -1,12 +1,9 @@
 package chapterThreeExercises;
 
-import BankApplication.Bank;
-
 public class Account {
     private double accountBalance;
     private String accountName;
     private final int accountNumber;
-    Bank bank = new Bank();
     int counter = 0;
 
     public Account(String accountName, double accountBalance) {

@@ -58,7 +58,6 @@ public class AccountTest {
     }
     @Test
     void testThatAccountCanHasAccountNumber(){
-
         assertEquals(1,account.getAccountNumber());
     }
 }
