@@ -43,4 +43,20 @@ class AccountTest {
         assertEquals(300.00, account.getBalance());
         assertEquals(700.00, account2.getBalance());
     }
+    @Test
+    void accountCanSetName(){
+        String firstName = "Sunny";
+        account.setName(firstName);
+        assertEquals("Sunny",account.getName());
+    }
+    @Test
+    void accountCanSetPin(){
+        account.setPin("0000");
+        assertEquals("0000",account.getPin());
+    }
+    @Test
+    void testThatAccountHasNumber(){
+        account.setAccountNo(1000);
+        assertEquals(1001,account.getAccountNo());
+    }
 }

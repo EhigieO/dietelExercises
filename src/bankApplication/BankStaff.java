@@ -4,8 +4,8 @@ public class BankStaff {
 
     private String firstName;
     private String lastName;
-    private static String pin;
-    private static String userName;
+    private static String pin = "0000";
+    private static String userName = "default";
 
     public void setFirstName(String firstName) {
         this.firstName = firstName;

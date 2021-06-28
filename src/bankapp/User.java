@@ -4,6 +4,7 @@ public class User {
     private String firstName;
     private String lastName;
     private String phoneNumber;
+    private String pin;
 
     public User(String firstName, String lastName) {
         this.firstName = firstName;
@@ -32,5 +33,13 @@ public class User {
 
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
+    }
+
+    public void setPin(String pin) {
+        this.pin = pin;
+    }
+
+    public String getPin() {
+        return pin;
     }
 }

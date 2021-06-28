@@ -6,8 +6,12 @@ public class Account {
     private AccountType accountType;
     private double balance;
     private String pin;
+    private int counter;
+    private String firstName;
+
 
     public Account() {
+        counter++;
         balance = 0.0;
     }
 
@@ -15,8 +19,9 @@ public class Account {
         return accountNo;
     }
 
-    public void setAccountNo(long accountNo) {
-        this.accountNo = accountNo;
+    public long setAccountNo(long accountNo) {
+        this.accountNo = accountNo + counter;
+        return accountNo;
     }
 
     public AccountType getAccountType() {
@@ -50,5 +55,13 @@ public class Account {
     public void transfer(Account account2, double amount) {
         withdraw(amount);
         account2.deposit(amount);
+    }
+
+    public void setName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getName() {
+        return firstName;
     }
 }

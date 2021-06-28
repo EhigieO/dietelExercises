@@ -18,13 +18,13 @@ public class Bank {
         return allCustomers.size();
     }
 
-    public void deleteCustomer( int accountNumber) {
+    public static void deleteCustomer(int accountNumber) {
         allCustomers.remove(accountNumber - 1);
 
     }
 
-    public ArrayList<Customer> getAllCustomers() {
-        //System.out.println(allCustomers);
+    public static ArrayList<Customer> getAllCustomers() {
+        System.out.println(allCustomers);
         return allCustomers;
     }
 

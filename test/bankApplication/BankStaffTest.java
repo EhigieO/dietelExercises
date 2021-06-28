@@ -31,5 +31,9 @@ class BankStaffTest {
         bankStaff.setUserName("Manager");
         assertEquals("Manager", bankStaff.getUserName());
     }
+//    @Test
+//    void testThatBankStaffCanCheckAccountNumber(){
+//        bankStaff.getAccountNumber();
+//    }
 
 }
