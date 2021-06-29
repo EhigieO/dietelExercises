@@ -29,9 +29,7 @@ public class MyersBriggsQuestionnaire {
                 {"A. control, govern", "B. latitude,freedom"}};
 
         Scanner input = new Scanner(System.in);
-        String userInput;
-        int numA = 0;
-        int numB = 0;
+
         char[] answers = new char[myersBrigg.length];
         char temp;
         boolean isValidEntry = false;
@@ -64,45 +62,90 @@ public class MyersBriggsQuestionnaire {
                 a--;
                 questionNumber--;
             }
-            System.out.println("\n".repeat(30));
+            System.out.println("\n".repeat(50));
         }
         System.out.println("This is your best personality descriptions");
-        String table = String.format("%5s%5s%s"," ","A","B");
-        System.out.printf(table.repeat(4));
+        String table = String.format("%5s%5s%5s"," ","A","B");
+        System.out.print(table.repeat(4));
+        System.out.println();
+        System.out.println("_____________________________________________________________");
+
+        int totalOneAs = 0;
+        int totalOneBs = 0;
+        int totalTwoAs = 0;
+        int totalTwoBs = 0;
+        int totalThreeAs = 0;
+        int totalThreeBs = 0;
+        int totalFourAs = 0;
+        int totalFourBs = 0;
+
         for (int i = 1; i <= myersBrigg.length ; i += 4) {
             System.out.printf("%5d",i);
             if(answers[i - 1] == 'A' || answers[i - 1] =='a'){
                 System.out.printf("%5s%5s","A"," ");
+                totalOneAs+=1;
             } else
             {
                 System.out.printf("%5s%5s"," ","B");
+                totalOneBs+=1;
             }
             System.out.printf("%5d", i + 1);
             if(answers[i] == 'A' || answers[i] == 'a'){
                 System.out.printf("%5s%5s","A"," ");
+                totalTwoAs+=1;
             }else
             {
                 System.out.printf("%5s%5s"," ","B");
+                totalTwoBs+=1;
             }
             System.out.printf("%5d", i + 2);
             if(answers[i + 1] == 'A' || answers[i + 1] == 'a'){
                 System.out.printf("%5s%5s","A"," ");
+                totalThreeAs+=1;
             }else
             {
                 System.out.printf("%5s%5s"," ","B");
+                totalThreeBs+=1;
             }
             System.out.printf("%5d", i + 3);
             if(answers[i + 2] == 'A' || answers[i + 2] == 'a'){
                 System.out.printf("%5s%5s","A"," ");
+                totalFourAs+=1;
             }else
             {
                 System.out.printf("%5s%5s"," ","B");
+                totalFourBs+=1;
             }
+            System.out.println();
         }
-        int numberOfAs = 0;
-        int numberOfBs = 0;
 
-        System.out.printf("%5s","Total");
+        System.out.printf("%5s%5d%5d%5s%5d%5d%5s%5d%5d%5s%5d%5d%n","Total",totalOneAs,totalOneBs," ",totalTwoAs,totalTwoBs,
+                " ",totalThreeAs,totalThreeBs," ",totalFourAs,totalFourBs);
+        char columnOne = 'a';
+        char columnTwo = 'a';
+        char columnThree = 'a';
+        char columnFour = 'a';
 
+        if (totalOneAs > totalOneBs) columnOne = 'E';
+        if (totalOneAs < totalOneBs) columnOne = 'I';
+        if (totalTwoAs > totalTwoBs) columnTwo = 'S';
+        if (totalTwoAs < totalTwoBs) columnTwo = 'N';
+        if (totalThreeAs > totalThreeBs) columnThree = 'T';
+        if (totalThreeAs < totalThreeBs) columnThree = 'F';
+        if (totalFourAs > totalFourBs) columnFour = 'J';
+        if (totalFourAs < totalFourBs) columnFour = 'P';
+
+        System.out.println("_____________________________________________________________");
+
+        System.out.printf("%5s%5c%5s%5s%5c%5s%5s%5c%5s%5s%5c"," ",columnOne," "," ",columnTwo," "," ",columnThree,
+                " "," ",columnFour);
+
+        String personality = """
+                            E - Extrovert   I - Introvert
+                            S - Sensing     N - Intuition
+                            T - Thinking    F - Feeling
+                            J - Judging     P - Perceive
+                            """;
+        System.out.println(personality);
     }
 }

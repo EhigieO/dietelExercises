@@ -16,7 +16,7 @@ class CustomerTest {
     @Test
     void testThatCustomerHasAccountNumber(){
         customer.setAccountNumber();
-        assertEquals(1001,customer.getAccountNumber());
+        assertEquals(1000,customer.getAccountNumber());
     }
     @Test
     void testThatCustomerCanDeposit(){
