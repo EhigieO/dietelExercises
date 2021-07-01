@@ -118,7 +118,7 @@ public class MyersBriggsQuestionnaire {
             }
             System.out.println();
         }
-
+        System.out.println("_____________________________________________________________");
         System.out.printf("%5s%5d%5d%5s%5d%5d%5s%5d%5d%5s%5d%5d%n","Total",totalOneAs,totalOneBs," ",totalTwoAs,totalTwoBs,
                 " ",totalThreeAs,totalThreeBs," ",totalFourAs,totalFourBs);
         char columnOne = 'a';
@@ -137,7 +137,7 @@ public class MyersBriggsQuestionnaire {
 
         System.out.println("_____________________________________________________________");
 
-        System.out.printf("%5s%5c%5s%5s%5c%5s%5s%5c%5s%5s%5c"," ",columnOne," "," ",columnTwo," "," ",columnThree,
+        System.out.printf("%5s%5c%5s%5s%5c%5s%5s%5c%5s%5s%5c%n"," ",columnOne," "," ",columnTwo," "," ",columnThree,
                 " "," ",columnFour);
 
         String personality = """
