@@ -18,14 +18,14 @@ public class Kata {
     public static void palindrome() {
         Scanner input = new Scanner(System.in);
 
-        int number;
-        int reversed = 0;
+        long number;
+        long reversed = 0;
         System.out.println("Enter number: ");
-        number = input.nextInt();
-        int pal = number;
+        number = input.nextLong();
+        long pal = number;
 
         while (number != 0) {
-            int digit = number % 10;
+            long digit = number % 10;
             reversed = reversed * 10 + digit;
             number /= 10;
         }
