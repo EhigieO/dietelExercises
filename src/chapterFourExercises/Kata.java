@@ -7,7 +7,7 @@ import static chapterSevenExercises.MultipleArrayOperations.sumUpArrays;
 
 public class Kata {
     public static void main(String... args) {
-        //palindrome();
+        palindrome();
         // testDrillerSoftware()
         //ellersProfit();
 //        Kata kata = new Kata();

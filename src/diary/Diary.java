@@ -44,7 +44,7 @@ public class Diary {
         entries.remove(foundEntry);
     }
 
-    public ArrayList<Entry> getAllEnteries() {
+    public ArrayList<Entry> getAllEntries() {
         return entries;
     }
 }

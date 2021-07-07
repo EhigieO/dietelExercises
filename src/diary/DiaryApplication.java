@@ -24,7 +24,7 @@ public class DiaryApplication {
                 String entryBody = scanner.next();
                 diary.addEntry(entryName,entryBody);
                 System.out.println("Success");
-                System.out.println(Arrays.toString(diary.getAllEnteries().toArray()));
+                System.out.println(Arrays.toString(diary.getAllEntries().toArray()));
                 main();
                 break;
             case 2:

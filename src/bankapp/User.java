@@ -36,6 +36,9 @@ public class User {
     }
 
     public void setPin(String pin) {
+//        if (this.pin == pin) {
+//            throw
+//        }
         this.pin = pin;
     }
 
