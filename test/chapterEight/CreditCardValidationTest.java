@@ -1,5 +1,6 @@
 package chapterEight;
 
+import chapterSevenExercises.CreditCardValidation;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -14,12 +15,12 @@ class CreditCardValidationTest {
   @Test
   void testThatCardNumberIsValid(){
     String number = "4388576018402626";
-    assertTrue(true,myCard.isValid(number));
+    assertTrue(myCard.isValid(number));
   }
   @Test
-    void testThatCardNumberCanDoubleEvenPlaceNumbers(){
+    void testThatCardNumberCanDoubleEvenAndOddPlaceNumbers(){
      String number = "4388576018402626";
-     assertEquals(7,myCard.sumOfDoubleEvenPlace(number));
+     assertEquals(75,myCard.sumOfCardNumbers(number));
   }
  // @Test
 //    void testThatCardNumberCanGetNUmber(){
@@ -28,12 +29,9 @@ class CreditCardValidationTest {
  // }
     @Test
     void testThatCardNumberCanGetDigit(){
-     assertEquals(2,myCard.getDigit(11));
-     assertEquals(4,myCard.getDigit(13));
-    }
-    @Test
-    void testThatCardNumberCanAddEvenNumbers(){
-     assertEquals(37,myCard.sumOfDoubleEvenPlace("4388576018402626"));
+     assertEquals(1,myCard.getDigit(5));
+     assertEquals(8,myCard.getDigit(4));
+     assertEquals(7,myCard.getDigit(8));
     }
     @Test
     void testThatCardNumberCanGetSize(){
@@ -42,8 +40,13 @@ class CreditCardValidationTest {
     }
     @Test
     void testThatCardNumberCanGetPrefixDigit(){
-        int[] cardNumber = {4,3,8,8,5,7,6,0,1,8,4,0,2,6,2,6};
-        assertEquals(4,myCard.getPrefix(cardNumber));
+        int number = 37;
+        assertEquals(37,myCard.getPrefixMatched(number));
+        number = 6;
+        assertEquals(6,myCard.getPrefixMatched(number));
+        number = 5;
+        assertEquals(5,myCard.getPrefixMatched(number));
+        number = 4;
+        assertEquals(4,myCard.getPrefixMatched(number));
     }
-
 }

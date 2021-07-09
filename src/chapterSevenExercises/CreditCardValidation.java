@@ -1,12 +1,8 @@
-package chapterEight;
-
-import java.security.InvalidParameterException;
-import java.util.Arrays;
-import java.util.Scanner;
+package chapterSevenExercises;
 
 public class CreditCardValidation {
 
-    public int sumOfDoubleEvenPlace(String number) {
+    public int sumOfCardNumbers(String number) {
         int[] cardNumber = getNumberArray(number);
         for (int i = 0; i < cardNumber.length; i += 2) {
             cardNumber[i] = getDigit(cardNumber[i]);
@@ -19,16 +15,15 @@ public class CreditCardValidation {
     }
 
 
-    public String isValid(String number) {
-        int[] cardNumber = new int[number.length()];
-        if (number.length() == 13 || number.length() == 16) {
-            for (int i = 0; i < number.length(); i += 2) {
-                char temp = number.charAt(i);
-                cardNumber[i] = getDigit(Character.getNumericValue(temp));
-            }
-        } else
-            throw new InvalidParameterException("Enter a valid credit card number");
-        return null;
+    public boolean isValid(String number) {
+        int prefix;
+        int[] cardNumber = getNumberArray(number);
+        for (int i =0; i < 2;i ++){
+            prefix = getPrefixMatched(cardNumber[i]);
+        }
+        int sum = sumOfCardNumbers(number);
+
+        return true;
     }
 
     public int[] getNumberArray(String number) {
@@ -55,10 +50,11 @@ public class CreditCardValidation {
         return cardNumber.length;
     }
 
-    public int getPrefix(int[] cardNumber) {
-
-        return 0;
+    public int getPrefixMatched(int number) {
+        if (number == 4 || number == 5 || number == 6 || number == 37) return number;
+        else return 0;
     }
+
 
 
 //    public void setFullName(String fullName) {
