@@ -1,18 +1,20 @@
 package chapterSevenExercises;
 
 import java.security.InvalidParameterException;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class CreditCardValidation {
     public static void main(String[] args) {
         Scanner scanner = new Scanner (System.in);
-        System.out.println("Enter credit card details: ");
+        System.out.print("Enter credit card details:");
         String number = scanner.next();
-
-
+        if (isValid(number)){
+            System.out.println("Credit Card is valid");
+        }
     }
 
-    public int sumOfCardNumbers(String number) {
+    private static int sumOfCardNumbers(String number) {
         int[] cardNumber = getNumberArray(number);
         for (int i = 0; i < cardNumber.length; i += 2) {
             cardNumber[i] = getDigit(cardNumber[i]);
@@ -25,15 +27,16 @@ public class CreditCardValidation {
     }
 
 
-    public boolean isValid(String number) {
+    public static boolean isValid(String number) {
         return (getNumberArray(number).length >= 13 && getNumberArray(number).length <= 16) &&
+                (sumOfCardNumbers(number) % 10 == 0) &&
                 ((getPrefixMatched(getNumberArray(number), 4) ||
                         getPrefixMatched(getNumberArray(number), 5) ||
                         getPrefixMatched(getNumberArray(number), 6) ||
                         getPrefixMatched(getNumberArray(number), 37)));
     }
 
-    public int[] getNumberArray(String number) {
+    private static int[] getNumberArray(String number) {
         int[] cardNumber = new int[number.length()];
             for (int i = 0; i < number.length(); i++) {
                 char temp = number.charAt(i);
@@ -42,7 +45,7 @@ public class CreditCardValidation {
         return cardNumber;
     }
 
-    public int getDigit(int number) {
+    private static int getDigit(int number) {
         number *= 2;
         if (number > 9) {
             number = 1 + number % 10;
@@ -50,24 +53,23 @@ public class CreditCardValidation {
         return number;
     }
 
-    public int getSize(int[] cardNumber) {
+    private static int getSize(int[] cardNumber) {
         return cardNumber.length;
     }
 
-    public boolean getPrefixMatched(int[] number, int d) {
-        if (getPrefix(number, getNumericSize(d)) == d) return true;
-        else return false;
+    private static boolean getPrefixMatched(int[] number, int d) {
+        return getPrefix(number, getNumericSize(d)) == d;
     }
-    public int getPrefix(int []number,int k){
+    private static int getPrefix(int []number,int k){
         if (getSize(number) > k){
             StringBuilder num = new StringBuilder();
             for ( int i = 0; i <= k;i++) num.append(number[i]);
             return Integer.parseInt(num.toString());
         }
-        return Integer.parseInt(String.valueOf(number));
+        return Integer.parseInt(Arrays.toString(number));
     }
 
-    public int getNumericSize(int d) {
+    private static int getNumericSize(int d) {
         String num = d + "";
         return num.length() - 1;
     }
