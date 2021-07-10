@@ -8,12 +8,11 @@ public class Pen {
     public Pen(){
         position = Position.Up;
     }
-    public void setPosition(Position down) {
-        position = Position.DOWN;
+    public void setPosition(Position position) {
+        this.position = position;
     }
 
     public Position getPosition() {
-        position = Position.Up;
         return position;
     }
 }

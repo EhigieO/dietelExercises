@@ -38,6 +38,9 @@ Pen biro;
     }
     @Test
     void turtleCanTurnPenDown(){
+        ijapa.penUp();
+        assertSame(Up,ijapa.getPenPosition());
+
         ijapa.penDown();
         assertSame(DOWN,ijapa.getPenPosition()) ;
     }
@@ -49,5 +52,6 @@ Pen biro;
     @Test
     void turtleCanTurnPenSouth(){
         ijapa.turnRight();
+        
     }
 }
