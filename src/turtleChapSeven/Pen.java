@@ -1,12 +1,10 @@
 package turtleChapSeven;
 
-import turtleChapSeven.Position;
-
 public class Pen {
     private Position position;
 
     public Pen(){
-        position = Position.Up;
+        position = Position.UP;
     }
     public void setPosition(Position position) {
         this.position = position;

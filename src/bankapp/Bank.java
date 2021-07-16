@@ -44,7 +44,7 @@ public class Bank {
          }
       }
 
-      throw new NullPointerException("customer does not exit");
+      throw new NullPointerException("customer does not exist");
    }
 
 }

@@ -1,17 +1,24 @@
-package chapterSevenExercises;
+package creditCardValidation;
 
-import java.security.InvalidParameterException;
 import java.util.Arrays;
 import java.util.Scanner;
 
 public class CreditCardValidation {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner (System.in);
+        Scanner scanner = new Scanner(System.in);
         System.out.print("Enter credit card details:");
         String number = scanner.next();
-        if (isValid(number)){
+        if (isValid(number)) {
             System.out.println("Credit Card is valid");
-        }
+        } else
+            System.out.println("Enter a valid card number");
+
+//        AbsClass arbs = new AbsClass() {
+//            @Override
+//            void storage() {
+//                System.out.println("go home now");
+//            }
+
     }
 
     private static int sumOfCardNumbers(String number) {
@@ -75,11 +82,8 @@ public class CreditCardValidation {
     }
 
 
-//    public void setFullName(String fullName) {
-//        String [] names = fullName.split(" ");
-//        firstName = names[0];
-//        lastName = names[1];
-//        this.fullName = lastName+ " "+ lastName;
-//         this.fullName = fullName;
-        //   }
-    }
+//    public abstract static class AbsClass {
+//        abstract void storage();
+//    }
+
+}

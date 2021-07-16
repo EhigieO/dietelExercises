@@ -1,6 +1,6 @@
 //package chapterSevenExercises;
 //
-//import chapterSevenExercises.CreditCardValidation;
+//import creditCardValidation.CreditCardValidation;
 //import org.junit.jupiter.api.BeforeEach;
 //import org.junit.jupiter.api.Test;
 //
