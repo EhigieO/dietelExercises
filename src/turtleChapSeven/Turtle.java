@@ -94,7 +94,7 @@ public class Turtle {
                 }
             }
             if (currentDirection == Direction.WEST) {
-                for (int i = columnPosition ; i > columnPosition-1- numberOfSteps; i --) {
+                for (int i = columnPosition; i > columnPosition - 1 - numberOfSteps; i--) {
                     mySketchpad.getFloor()[rowPosition][i] = 1;
                 }
             }
