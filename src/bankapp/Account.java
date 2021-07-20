@@ -19,7 +19,7 @@ public class Account {
         return accountNo;
     }
 
-    public long setAccountNo(long accountNo) {
+    public long setAccountNo(int accountNo) {
         this.accountNo = accountNo + counter;
         return accountNo;
     }

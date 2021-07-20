@@ -13,11 +13,6 @@ public class CreditCardValidation {
         } else
             System.out.println("Enter a valid card number");
 
-//        AbsClass arbs = new AbsClass() {
-//            @Override
-//            void storage() {
-//                System.out.println("go home now");
-//            }
 
     }
 
@@ -81,9 +76,5 @@ public class CreditCardValidation {
         return num.length() - 1;
     }
 
-
-//    public abstract static class AbsClass {
-//        abstract void storage();
-//    }
 
 }

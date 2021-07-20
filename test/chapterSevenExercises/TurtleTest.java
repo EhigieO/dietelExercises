@@ -187,5 +187,47 @@ class TurtleTest {
         ijapa.turnLeft();
         ijapa.move(5,sketchpad);
         sketchpad.displayMethod();
+} @Test
+    void turtleCanWriteWhenPenIsDownAndTurtleFacingNorth() {
+    Sketchpad sketchpad = new Sketchpad(20, 20);
+        ijapa.penDown();
+        ijapa.move(15,sketchpad);
+
+    ijapa.turnRight();
+    ijapa.move(3,sketchpad);
+    ijapa.turnRight();
+    ijapa.move(10,sketchpad);
+
+
+        assertEquals(0,sketchpad.getFloor()[0][16]);
+        assertEquals(1,sketchpad.getFloor()[0][15]);
+        assertEquals(1,sketchpad.getFloor()[0][14]);
+        assertEquals(1,sketchpad.getFloor()[0][13]);
+        assertEquals(1,sketchpad.getFloor()[0][12]);
+        assertEquals(1,sketchpad.getFloor()[0][11]);
+        assertEquals(1,sketchpad.getFloor()[0][10]);
+        assertEquals(1,sketchpad.getFloor()[0][9]);
+        assertEquals(1,sketchpad.getFloor()[0][8]);
+        assertEquals(1,sketchpad.getFloor()[0][7]);
+        ijapa.turnLeft();
+        ijapa.move(5,sketchpad);
+        ijapa.turnLeft();
+        ijapa.move(6,sketchpad);
+        ijapa.turnLeft();
+        ijapa.move(8,sketchpad);
+
+        assertEquals(1,sketchpad.getFloor()[7][11]);
+        assertEquals(1,sketchpad.getFloor()[8][11]);
+        assertEquals(1,sketchpad.getFloor()[7][11]);
+        assertEquals(1,sketchpad.getFloor()[6][11]);
+        assertEquals(1,sketchpad.getFloor()[5][11]);
+        assertEquals(1,sketchpad.getFloor()[4][11]);
+        assertEquals(1,sketchpad.getFloor()[3][11]);
+        assertEquals(1,sketchpad.getFloor()[2][11]);
+        assertEquals(1,sketchpad.getFloor()[1][11]);
+        assertEquals(1,sketchpad.getFloor()[0][11]);
+
+        sketchpad.displayMethod();
 }
+
 }

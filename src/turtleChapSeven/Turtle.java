@@ -4,13 +4,13 @@ public class Turtle {
     private Pen pen;
     private Direction currentDirection;
     private TurtlePosition ijapaPosition;
-    private Sketchpad mySketchpad;
 
 
     public Turtle() {
         pen = new Pen();
         currentDirection = Direction.EAST;
         ijapaPosition = new TurtlePosition();
+
     }
 
     public void setPen(Pen biro) {
@@ -96,6 +96,11 @@ public class Turtle {
             if (currentDirection == Direction.WEST) {
                 for (int i = columnPosition; i > columnPosition - 1 - numberOfSteps; i--) {
                     mySketchpad.getFloor()[rowPosition][i] = 1;
+                }
+            }
+            if (currentDirection == Direction.NORTH){
+                for (int i = rowPosition; i > rowPosition -1 -numberOfSteps; i--) {
+                    mySketchpad.getFloor()[i][columnPosition] = 1;
                 }
             }
             move(numberOfSteps);
