@@ -15,7 +15,7 @@ public class Bank {
    public boolean isLogin(int accountNumber, String pin) {
       for (Customer customer : customers) {
          if (customer.getAccountNumber() == accountNumber) {
-            if (customer.getPin() == pin) {
+            if (customer.getPassword() == pin) {
                return true;
             }
          }

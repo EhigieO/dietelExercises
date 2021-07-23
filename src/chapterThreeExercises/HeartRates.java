@@ -5,7 +5,7 @@ import java.time.LocalDate;
 public class HeartRates {
     private String firstName;
     private String lastName;
-    private Date dateOfBirth;
+    private final Date dateOfBirth;
 
     public HeartRates(String firstName, String lastName, Date dateOfBirth) {
         this.firstName = firstName;

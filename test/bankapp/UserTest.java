@@ -12,7 +12,7 @@ class UserTest {
     }
     @Test
     void testThatUserHasPin(){
-        user.setPin("0000");
-        assertEquals("0000", user.getPin());
+        user.setPassword("0000");
+        assertEquals("0000", user.getPassword());
     }
 }

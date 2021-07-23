@@ -1,13 +1,20 @@
 package chapterSevenExercises;
 
+import java.security.SecureRandom;
 import java.util.Scanner;
 
-public class ArithmeticProgression {
+public class Progression {
     public static void main(String[] args) {
         Scanner userInput = new Scanner(System.in);
-        System.out.println("Enter 1 for ARITHMETIC PROGRESSION");
-        System.out.println("Enter 2 for GEOMETRIC PROGRESSION");
-        int selection = userInput.nextInt();
+        int selection = 0;
+        while (selection != 1 && selection != 2) {
+            try {
+                selection = input(userInput);
+            } catch (IllegalArgumentException e) {
+                System.out.println(e.getMessage());
+
+            }
+        }
         System.out.println("Enter series of three numbers:");
         int numberOne = userInput.nextInt();
         int numberTwo = userInput.nextInt();
@@ -18,6 +25,14 @@ public class ArithmeticProgression {
             if (selection == 2){
                 System.out.println(geometric(numberOne,numberTwo,numberThree));
             }
+    }
+
+    private static int input(Scanner userInput) {
+        System.out.println("Enter 1 for ARITHMETIC PROGRESSION");
+        System.out.println("Enter 2 for GEOMETRIC PROGRESSION");
+        int selection = userInput.nextInt();
+        if (selection > 2) throw new IllegalArgumentException("Enter a valid selection");
+        return selection;
     }
 
     public static int difference(int numberOne, int numberTwo) {
