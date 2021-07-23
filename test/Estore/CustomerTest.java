@@ -18,6 +18,6 @@ class CustomerTest {
         String name = "Ikpea Ehigie";
         String address = ("No 312, Herbert Macaulay way,Yaba Lagos");
         Long CreditCardNumber = 438857618402626L;
-        customer.setBillingInfo();
+       // customer.setBillingInfo();
     }
 }

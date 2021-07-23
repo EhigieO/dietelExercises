@@ -1,9 +1,11 @@
 package creditCardValidation;
 
+import java.security.InvalidParameterException;
 import java.util.Arrays;
 import java.util.Scanner;
 
 public class CreditCardValidation {
+    CardType cardType;
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter credit card details:");
@@ -16,7 +18,7 @@ public class CreditCardValidation {
 
     }
 
-    private static int sumOfCardNumbers(String number) {
+    public static int sumOfCardNumbers(String number) {
         int[] cardNumber = getNumberArray(number);
         for (int i = 0; i < cardNumber.length; i += 2) {
             cardNumber[i] = getDigit(cardNumber[i]);
@@ -47,7 +49,7 @@ public class CreditCardValidation {
         return cardNumber;
     }
 
-    private static int getDigit(int number) {
+    public static int getDigit(int number) {
         number *= 2;
         if (number > 9) {
             number = 1 + number % 10;
@@ -55,14 +57,14 @@ public class CreditCardValidation {
         return number;
     }
 
-    private static int getSize(int[] cardNumber) {
+    public static int getSize(int[] cardNumber) {
         return cardNumber.length;
     }
 
-    private static boolean getPrefixMatched(int[] number, int d) {
+    public static boolean getPrefixMatched(int[] number, int d) {
         return getPrefix(number, getNumericSize(d)) == d;
     }
-    private static int getPrefix(int []number,int k){
+    public static int getPrefix(int[] number, int k){
         if (getSize(number) > k){
             StringBuilder num = new StringBuilder();
             for ( int i = 0; i <= k;i++) num.append(number[i]);
@@ -71,10 +73,34 @@ public class CreditCardValidation {
         return Integer.parseInt(Arrays.toString(number));
     }
 
-    private static int getNumericSize(int d) {
+    public static int getNumericSize(int d) {
         String num = d + "";
         return num.length() - 1;
     }
 
 
+    public CardType getCardType(int[] number, int d) {
+
+        if (!getPrefixMatched(number, d)) {throw new InvalidParameterException("Invalid Card details");}
+        else
+            switch (d){
+                case 4:
+                    if(number.length == 13 || number.length == 16)
+                        cardType = CardType.VISA;
+                    break;
+                case 6:
+                    if (number.length == 16)
+                        cardType = CardType.VERVE;
+                    break;
+                case 5:
+                    if (number.length == 16)
+                        cardType = CardType.MASTER;
+                    break;
+                case 34:
+                case 37:
+                    if (number.length == 15)
+                        cardType = CardType.AMERICA;
+                default:
+            }return cardType;
+    }
 }
