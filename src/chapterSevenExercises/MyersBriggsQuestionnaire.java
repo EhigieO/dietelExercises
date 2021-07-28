@@ -6,7 +6,6 @@ import java.util.Scanner;
 
 public class MyersBriggsQuestionnaire {
     public static void main(String[] args) {
-
         String[][] myersBrigg = {{"A. expend energy, enjoy groups", "B. conserve energy, enjoy one-on-one"},
                 {"A. interpret literally", "B. look for meaning and possibilities"},
                 {"A. logical, thinking, questioning", "B. empathetic, feeling, accommodating"},
