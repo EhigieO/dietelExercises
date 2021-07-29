@@ -48,4 +48,5 @@ public class CounterSalesRecord {
         System.out.print("                     Total:    ");
         System.out.println(totalPriceOfAllItems);
     }
+
 }
