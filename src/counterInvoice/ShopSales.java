@@ -50,19 +50,7 @@ public class ShopSales {
                 System.out.println(error.getMessage());
             }
         } while (proceed == 1);
-        displayInvoice(cart);
-        System.out.printf("%35.2f\t",totalPrice);
-    }
-
-    private static void displayInvoice(Cart itemCart) {
-        System.out.println("*******************RECEIPT*******************");
-        System.out.printf("%s %8s %10s %10s\n","Quantity","Item","Price","total");
-        for (int i = 0; i < itemCart.displayItems().size(); i++) {
-            Item item = itemCart.displayItems().get(i);
-            int quantity = item.getNumberOfItem();
-            String name = item.getName();
-            double price = item.getItemPrice();
-            System.out.printf("%d %8s %10.2f%n",quantity,name,price);
-        }
+        cart.displayInvoice();
+        System.out.printf("%s%35.2f\t","GrandTotal:",totalPrice);
     }
 }

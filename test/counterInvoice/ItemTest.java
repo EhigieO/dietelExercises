@@ -46,6 +46,6 @@ class ItemTest {
         int quantity = 10;
         salesBoy = new Item(itemName,price,quantity);
         cart.addItem(salesBoy);
-        System.out.println(cart.displayItems());
+        System.out.println(cart.getItems());
     }
 }
