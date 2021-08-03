@@ -3,7 +3,7 @@ public class CodeWarBattle {
     public static int[] addIndicesInArray(int[] arraySum, int number) {
         int [] result = new int[2];
         int j;
-        int temp = 0;
+        int temp;
         for (int i = 0; i < arraySum.length; i++) {
             for (j = i+1; j < arraySum.length; j++) {
                 temp = arraySum[i] + arraySum[j];
