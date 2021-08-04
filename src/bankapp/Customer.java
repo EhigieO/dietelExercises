@@ -1,8 +1,7 @@
 package bankapp;
 
 public class Customer extends User{
-    private Account account;
-    long accountNumber;
+    private Account account = new Account();
 
     public Customer(String firstName, String lastName) {
         super(firstName, lastName);
@@ -21,21 +20,4 @@ public class Customer extends User{
         this.account = account;
     }
 
-
-
-    public void setAccountNumber() {
-        accountNumber = account.setAccountNo(1000);
-    }
-
-    public long getAccountNumber() {
-        return accountNumber;
-    }
-
-    public void deposit(int amount) {
-        account.deposit(amount);
-    }
-
-    public void withdraw(int amountToWithdraw) {
-        account.withdraw(amountToWithdraw);
-    }
 }

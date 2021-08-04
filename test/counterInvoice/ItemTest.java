@@ -29,7 +29,7 @@ class ItemTest {
     void testThatItemCanTakeNumberOfItems(){
         int numberOfItem = 10;
         salesBoy.setNumberOfItems(numberOfItem);
-        assertEquals(10,salesBoy.getNumberOfItem());
+        assertEquals(10,salesBoy.getQuantity());
     }
     @Test
     void testThatCartCanStoreItems(){
@@ -46,6 +46,17 @@ class ItemTest {
         int quantity = 10;
         salesBoy = new Item(itemName,price,quantity);
         cart.addItem(salesBoy);
+        itemName = "acid";
+        price = 20.0;
+        quantity = 100;
+        salesBoy = new Item(itemName,price,quantity);
+        cart.addItem(salesBoy);
+        itemName = "sniper";
+        price = 250.0;
+        quantity = 90;
+        salesBoy = new Item(itemName,price,quantity);
+        cart.addItem(salesBoy);
+
         System.out.println(cart.getItems());
     }
 }

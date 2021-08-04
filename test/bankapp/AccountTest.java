@@ -36,27 +36,22 @@ class AccountTest {
         assertEquals(300.00, account.getBalance());
     }
     @Test
-    void makeTransfer(){
-        double amount = 700.00;
-        account.deposit(1000.00);
-        account.transfer(account2, amount);
-        assertEquals(300.00, account.getBalance());
-        assertEquals(700.00, account2.getBalance());
-    }
-    @Test
     void accountCanSetName(){
         String firstName = "Sunny";
-        account.setName(firstName);
-        assertEquals("Sunny",account.getName());
+        String lastName = "Duke";
+        account.setName(firstName,lastName);
+        assertEquals("Sunny Duke",account.getName());
     }
     @Test
     void accountCanSetPin(){
-        account.setPin("0000");
-        assertEquals("0000",account.getPin());
+        account.setPin("4523");
+        assertEquals("4523",account.getPin());
     }
     @Test
     void testThatAccountHasNumber(){
-        account.setAccountNo(1000);
-        assertEquals(1001,account.getAccountNo());
+        assertEquals(700455501,account.getAccountNo());
+        assertEquals(700455502,account2.getAccountNo());
+        Account account3 = new Account();
+        assertEquals(700455503,account3.getAccountNo());
     }
 }

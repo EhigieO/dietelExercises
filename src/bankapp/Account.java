@@ -1,26 +1,21 @@
 package bankapp;
 
 public class Account {
-
-    private long accountNo;
-    private AccountType accountType;
+    private static int accountNoGenerator = 700455500;
+    private final int accountNo;
+    private AccountType accountType = AccountType.SAVINGS;
     private double balance;
-    private String pin;
-    private int counter;
+    private String pin = "0000";
     private String firstName;
-
+    private String lastName;
 
     public Account() {
-        counter++;
-        balance = 0.0;
+        accountNoGenerator += 1;
+        this.accountNo = accountNoGenerator;
+
     }
 
-    public long getAccountNo() {
-        return accountNo;
-    }
-
-    public long setAccountNo(int accountNo) {
-        this.accountNo = accountNo + counter;
+    public int getAccountNo() {
         return accountNo;
     }
 
@@ -52,16 +47,11 @@ public class Account {
         balance -= amount;
     }
 
-    public void transfer(Account account2, double amount) {
-        withdraw(amount);
-        account2.deposit(amount);
-    }
-
-    public void setName(String firstName) {
-        this.firstName = firstName;
+    public void setName(String firstName, String lastName) {
+        this.firstName = firstName; this.lastName = lastName;
     }
 
     public String getName() {
-        return firstName;
+        return firstName + " " + lastName;
     }
 }

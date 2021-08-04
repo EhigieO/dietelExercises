@@ -4,13 +4,13 @@ public class Item {
 
     private String itemName;
     private double itemPrice;
-    private int numberOfItem;
+    private int quantity;
     private double costOfItems;
 
-    public Item(String itemName, double itemPrice, int numberOfItem) {
+    public Item(String itemName, double itemPrice, int quantity) {
         this.itemName = itemName;
         this.itemPrice = itemPrice;
-        this.numberOfItem = numberOfItem;
+        this.quantity = quantity;
     }
     public Item(){
 
@@ -34,15 +34,15 @@ public class Item {
 
     @Override
     public String toString() {
-        return String.format("%d %15s %10.2f",numberOfItem,itemName,itemPrice);
+        return String.format("%d %15s %10.2f", quantity,itemName,itemPrice);
     }
 
     public void setNumberOfItems(int numberOfItem) {
-        this.numberOfItem = numberOfItem;
+        this.quantity = numberOfItem;
     }
 
-    public int getNumberOfItem() {
-        return numberOfItem;
+    public int getQuantity() {
+        return quantity;
     }
 
     public double getCostOfItems() {

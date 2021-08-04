@@ -6,7 +6,6 @@ public class User {
     private String firstName;
     private String lastName;
     private String phoneNumber;
-    private String password;
 
     public User(String firstName, String lastName) {
         this.firstName = firstName;
@@ -39,12 +38,4 @@ public class User {
         this.phoneNumber = phoneNumber;
     }
 
-    public void setPassword(String password) {
-        if (password.length() > 3 && password.length() < 11){
-        this.password = password;} else throw new InvalidParameterException("Enter a valid password");
-    }
-
-    public String getPassword() {
-        return password;
-    }
 }

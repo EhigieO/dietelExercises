@@ -2,7 +2,6 @@ package counterInvoice;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 public class Cart {
     List<Item> items = new ArrayList<>();
@@ -20,7 +19,7 @@ public class Cart {
         Cart itemCart = null;
         for (int i = 0; i < itemCart.getItems().size(); i++) {
             Item item = itemCart.getItems().get(i);
-            int quantity = item.getNumberOfItem();
+            int quantity = item.getQuantity();
             String name = item.getName();
             double price = item.getItemPrice();
             System.out.printf("%d%12s%12.2f%15.2f%n",quantity,name,price,(price * quantity));

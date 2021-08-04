@@ -7,26 +7,25 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class CustomerTest {
     Customer customer;
-    Account account;
+    //Account account;
     @BeforeEach
     void setUp() {
-        account = new Account();
-        customer = new Customer("Sunny","Duke",account);
-    }
-    @Test
-    void testThatCustomerHasAccountNumber(){
-        customer.setAccountNumber();
-        assertEquals(1000,customer.getAccountNumber());
+       // account = new Account();
+        customer = new Customer("Sunny","Duke");
     }
     @Test
     void testThatCustomerCanDeposit(){
-        customer.deposit(1000);
+        customer.getAccount().deposit(1000);
         assertEquals(1000,customer.getAccount().getBalance());
     }
     @Test
     void testThatCustomerCanWithdraw(){
-        customer.deposit(1000);
-        customer.withdraw(500);
+        customer.getAccount().deposit(1000);
+        customer.getAccount().withdraw(500);
         assertEquals(500,customer.getAccount().getBalance());
+    }
+    @Test
+    void testThatCustomerHasAccountNumber(){
+        assertEquals(700455500,customer.getAccount().getAccountNo());
     }
 }

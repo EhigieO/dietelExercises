@@ -1,5 +1,6 @@
 package bankapp;
 
+import javax.security.auth.login.CredentialException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,8 +15,8 @@ public class Bank {
 
    public boolean isLogin(int accountNumber, String pin) {
       for (Customer customer : customers) {
-         if (customer.getAccountNumber() == accountNumber) {
-            if (customer.getPassword() == pin) {
+         if (customer.getAccount().getAccountNo() == accountNumber) {
+            if (customer.getAccount().getPin().equals(pin)) {
                return true;
             }
          }
@@ -23,23 +24,25 @@ public class Bank {
       return false;
    }
 
-   public void transfer(int accountNumber, int transfereeAccountNumber, int amount, String pin) {
+   public void transfer(int accountNumber, int receiverAccountNumber, int amount, String pin) throws CredentialException {
          if (isLogin(accountNumber,pin)){
             for (Customer customer : customers) {
-               if (customer.getAccountNumber()==transfereeAccountNumber){
-                  if (getCustomerAccountNumber(accountNumber).getAccount().getBalance() > amount){
-                     getCustomerAccountNumber(accountNumber).withdraw(amount);
-                     customer.deposit(amount);
-                  }
+               if (customer.getAccount().getAccountNo() == receiverAccountNumber) {
+                  if (getCustomerAccountNumber(accountNumber).getAccount().getBalance() > amount) {
+                     getCustomerAccountNumber(accountNumber).getAccount().withdraw(amount);
+                     customer.getAccount().deposit(amount);
+                  } else
+                     throw new IllegalArgumentException("Insufficient account balance");
                }
             }
-         }
+         } else
+            throw new CredentialException("Invalid pinCode");
 
    }
 
    public Customer getCustomerAccountNumber(int accountNumber) {
       for (Customer customer : customers) {
-         if (customer.getAccountNumber() == accountNumber) {
+         if (customer.getAccount().getAccountNo() == accountNumber) {
             return customer;
          }
       }
