@@ -9,7 +9,7 @@ public class CodeWarBattle {
                 temp = arraySum[i] + arraySum[j];
                  if (temp == number) {
                      result[0] = i;
-                     result[1] = (j);
+                     result[1] = j;
                      break;
                  }
             }
