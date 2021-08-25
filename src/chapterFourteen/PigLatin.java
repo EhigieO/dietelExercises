@@ -9,11 +9,11 @@ public class PigLatin {
         String sentence = scanner.nextLine();
         String[] tokens = sentence.split(" ");
         for (String token: tokens){
-            printPigTin(token);
+            System.out.println(printPigTin(token));
         }
     }
 
-    private static void printPigTin(String token){
-        System.out.print(token.substring(1) + token.charAt(0) + "ay ");
+    private static String printPigTin(String token){
+        return (token.substring(1) + token.charAt(0) + "ay ");
     }
 }
