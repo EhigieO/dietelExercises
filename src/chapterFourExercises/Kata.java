@@ -1,6 +1,5 @@
 package chapterFourExercises;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 import static chapterSevenExercises.MultipleArrayOperations.sumUpArrays;
@@ -22,7 +21,7 @@ public class Kata {
         long reversed = 0;
         System.out.println("Enter number: ");
         number = input.nextLong();
-        long pal = number;
+        long temp = number;
 
         while (number != 0) {
             long digit = number % 10;
@@ -30,7 +29,7 @@ public class Kata {
             number /= 10;
         }
         System.out.println(reversed);
-        if (reversed == pal) {
+        if (reversed == temp) {
             System.out.print("Number is a Palindrome " + reversed);
         }
     }
